@@ -1,0 +1,267 @@
+{
+    "status": "ok",
+    "totalResults": 33,
+    "articles": [
+        {
+            "source": {
+                "id": "the-washington-post",
+                "name": "The Washington Post"
+            },
+            "author": "Isaac Erbele, MD",
+            "title": "Is it safe to play a white noise machine all night? - The Washington Post",
+            "description": "We conducted a review of the medical literature on white noise machines for young children. All the devices generated alarmingly loud sounds.",
+            "url": "https://www.washingtonpost.com/wellness/2024/06/24/white-noise-machine-safe/",
+            "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/7MV2LK2D7FA7XEFW72VIMBR2CI.gif&w=1440",
+            "publishedAt": "2024-06-24T12:32:37Z",
+            "content": "Ive been using a white noise machine since my son was born. It helps him sleep. Is that bad? Could it affect his hearing?\r\nMany American households turn to white noise machines to help their children… [+4359 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Sports Illustrated"
+            },
+            "author": "Shandel Richardson",
+            "title": "Old-School NBA Fan Ric Flair Now Captivated By Angel Reese-Caitlin Clark Phenomenon - Sports Illustrated",
+            "description": "Legendary wrestler Ric Flair was one of the NBA's biggest fans during the 1980s and `90s but now is following Caitlin Clark and Angel Reese in the WNBA",
+            "url": "https://www.si.com/fannation/backinthedaynba/old-school-nba-fan-ric-flair-now-captivated-by-angel-reese-caitlin-clark-phenomenon-01j152qfxv2j",
+            "urlToImage": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2133,h_1199,x_0,y_960/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/back_in_the_day_nba/01j152wmpnmtg4efxakw.jpg",
+            "publishedAt": "2024-06-24T12:30:01Z",
+            "content": "Pro wrestling legend Ric Flair has long been a fan of the NBA. \r\nHe followed it when Kareem Abdul-Jabbar was dominating with the Milwaukee Bucks. He was courtside when Larry Bird and Magic Johnson we… [+1798 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Brian Lowry",
+            "title": "‘Inside Out 2’ fills Disney with joy, even if its culture-war critics stay angry - CNN",
+            "description": "As emotions go, Disney’s loudest critics might sound angry, but “Inside Out 2” is bringing the studio nothing but joy.",
+            "url": "https://www.cnn.com/2024/06/24/entertainment/inside-out-2-box-office-disney-critics-woke/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/inside-out-2-online-use-i140-15mt-pub-pub16-1581.jpg?c=16x9&q=w_800,c_fill",
+            "publishedAt": "2024-06-24T12:20:00Z",
+            "content": "As emotions go, Disneys loudest critics might sound angry, but Inside Out 2 is bringing the studio nothing but joy.\r\nThe Walt Disney Co. has often found itself cast as a reluctant participant in the … [+3620 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters",
+            "title": "China wants EU to scrap EV tariff plans as talks start - Reuters",
+            "description": null,
+            "url": "https://www.reuters.com/markets/china-wants-eu-scrap-ev-tariffs-evs-by-july-4-chinese-state-media-reports-2024-06-24/",
+            "urlToImage": null,
+            "publishedAt": "2024-06-24T12:15:38Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Post"
+            },
+            "author": "Nika Shakhnazarova",
+            "title": "Princess Anne rushed to hospital after suffering head injuries - New York Post ",
+            "description": "“The Princess Royal has sustained minor injuries and concussion following an incident on the Gatcombe Park estate yesterday evening,” Buckingham Palace said in a statement Monday.",
+            "url": "https://nypost.com/2024/06/24/world-news/princess-anne-rushed-to-hospital-after-suffering-head-injuries/",
+            "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2024/06/princess-anne-hospitalized-comp-2.jpg?quality=75&strip=all&w=1024",
+            "publishedAt": "2024-06-24T11:49:00Z",
+            "content": "Princess Anne has been rushed to the hospital after suffering head injuries and a concussion following an incident on the Gatcombe Park estate Sunday night.\r\n“The Princess Royal has sustained minor i… [+2835 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Courier Journal"
+            },
+            "author": "Kinsey Crowley",
+            "title": "State abortion law changes, challenges since Dobbs ruling: A patchwork - Courier Journal",
+            "description": "Two years ago, the Supreme Court Dobbs decision sent abortion rights back to the states. Here is how some protected and restricted abortion access.",
+            "url": "https://www.courier-journal.com/story/news/2024/06/24/state-by-state-abortion-laws-dobbs-anniversary/74190464007/",
+            "urlToImage": "https://www.courier-journal.com/gcdn/authoring/authoring-images/2024/06/21/USAT/74173307007-20240424-t-190101-z-1931459653-rc-21-d-7-a-7-nva-7-rtrmadp-3-usacourtabortionidaho.JPG?crop=3935,2215,x0,y204&width=3200&height=1802&format=pjpg&auto=webp",
+            "publishedAt": "2024-06-24T11:37:15Z",
+            "content": "Monday marks two years since the U.S. Supreme Court overturned the federal right to an abortion.\r\nThe Dobbs decision issued June 24, 2022 upheld Mississippi's ban on abortion after 15 weeks. Since th… [+26403 chars]"
+        },
+        {
+            "source": {
+                "id": "fox-news",
+                "name": "Fox News"
+            },
+            "author": "Ryan Gaydos",
+            "title": "Pat McAfee calls Taylor Swift's ex-boyfriends 'bums' in praise of Travis Kelce after concert appearance - Fox News",
+            "description": "ESPN star Pat McAfee offered a high praise of Travis Kelce for joining Taylor Swift on stage Sunday night and ripped her ex-boyfriends.",
+            "url": "https://www.foxnews.com/sports/pat-mcafee-calls-taylor-swifts-ex-boyfriends-bums-praise-travis-kelce-after-concert-appearance",
+            "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2024/06/Kelce-Swift-McAfee.jpg",
+            "publishedAt": "2024-06-24T11:35:00Z",
+            "content": "Join Fox News for access to this content\r\nPlus special access to select articles and other premium content with your account - free of charge.\r\nBy entering your email and pushing continue, you are ag… [+1755 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Michele Luhn",
+            "title": "5 things to know before the stock market opens Monday - CNBC",
+            "description": "Here are five key things investors need to know to start the trading day.",
+            "url": "https://www.cnbc.com/2024/06/24/5-things-to-know-before-the-stock-market-opens-monday-june-24.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/107423294-1717422384480-gettyimages-2155115343-AFP_34UQ4HG.jpeg?v=1717422456&w=1920&h=1080",
+            "publishedAt": "2024-06-24T11:11:55Z",
+            "content": "Here are five key things investors need to know to start the trading day:\r\n1. Smooth sailing\r\nThe S&amp;P 500 dipped 0.16% on Friday but still registered a 0.6% gain for the week. The broad market in… [+4334 chars]"
+        },
+        {
+            "source": {
+                "id": "ars-technica",
+                "name": "Ars Technica"
+            },
+            "author": "Kyle Orland",
+            "title": "In first person: John Romero reflects on over three decades as the “Doom guy” - Ars Technica",
+            "description": "Id Software co-founder talks to Ars about everything from Catacomb 3-D to \"boomer shooters.\"",
+            "url": "https://arstechnica.com/gaming/2024/06/in-first-person-john-romero-reflects-on-over-three-decades-as-the-doom-guy/",
+            "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2024/06/romero-boomer-shooter-doom-760x380.jpg",
+            "publishedAt": "2024-06-24T11:00:42Z",
+            "content": "25\r\nJohn Romero remembers the moment he realized what the future of gaming would look like.In late 1991, Romero and his colleagues at id Software had just released Catacomb 3-D, a crude-looking, EGA-… [+3046 chars]"
+        },
+        {
+            "source": {
+                "id": "bloomberg",
+                "name": "Bloomberg"
+            },
+            "author": "Hema Parmar",
+            "title": "Jain Raises $5.3 Billion in Biggest Hedge Fund Debut Since 2018 - Bloomberg",
+            "description": "Bobby Jain has gathered $5.3 billion in commitments for his new multistrategy hedge fund, marking the biggest fundraising haul since ExodusPoint Capital Management’s record debut.",
+            "url": "https://www.bloomberg.com/news/articles/2024-06-24/jain-raises-5-3-billion-in-biggest-hedge-fund-debut-since-2018",
+            "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iQ1zaNsjdBnI/v0/1200x853.jpg",
+            "publishedAt": "2024-06-24T11:00:00Z",
+            "content": "Bobby Jain has gathered $5.3 billion in commitments for his new multistrategy hedge fund, marking the biggest fundraising haul since ExodusPoint Capital Managements record debut.\r\nJain Global will st… [+173 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Ben Church",
+            "title": "Christian Pulisic scores spectacular goal as US beats Bolivia in Copa América opener - CNN",
+            "description": "It was the perfect start for Christian Pulisic and the US at this year’s Copa América, with the forward inspiring his side to a 2-0 win against Bolivia on Sunday.",
+            "url": "https://www.cnn.com/2024/06/24/sport/christian-pulisic-us-bolivia-america-spt-intl/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2158906863.jpg?c=16x9&q=w_800,c_fill",
+            "publishedAt": "2024-06-24T10:48:00Z",
+            "content": "It was the perfect start for Christian Pulisic and the US at this years Copa América, with the forward inspiring his side to a 2-0 win against Bolivia on Sunday.\r\nThe US captain settled any nerves fo… [+2002 chars]"
+        },
+        {
+            "source": {
+                "id": "associated-press",
+                "name": "Associated Press"
+            },
+            "author": "HYUNG-JIN KIM",
+            "title": "South Korea factory fire: At least 16 people killed. Rescue underway - The Associated Press",
+            "description": "A fire likely sparked by exploding lithium batteries has swept through a manufacturing factory near South Korea’s capital, killing 22 mostly Chinese migrant workers and injuring eight. Official say the fire began Monday after batteries exploded while workers …",
+            "url": "https://apnews.com/article/south-korea-battery-factory-fire-4e668dc7248e4de274aaf910c66359a0",
+            "urlToImage": "https://dims.apnews.com/dims4/default/70aa031/2147483647/strip/true/crop/3460x1946+0+231/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F16%2Fc0%2F5662cee3be981f6c09dbd5677164%2F65e423f9385a437285ee61cef020fecd",
+            "publishedAt": "2024-06-24T10:33:00Z",
+            "content": "SEOUL, South Korea (AP) A fire likely sparked by exploding lithium batteries swept through a manufacturing factory near South Koreas capital on Monday, killing 22 mostly Chinese migrant workers and i… [+1615 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Space.com"
+            },
+            "author": "Elizabeth Howell",
+            "title": "Will Boeing Starliner issues delay its 1st long-duration astronaut flight? It's too soon to tell. - Space.com",
+            "description": "Starliner-1 is supposed to fly in 2025, but that assumes that no major issues arise on its first astronaut mission, which is ongoing.",
+            "url": "https://www.space.com/crew-flight-test-starliner-1-certification-schedule-question",
+            "urlToImage": "https://cdn.mos.cms.futurecdn.net/iLBhRkVaKaZYUmiqadzRMJ-1200-80.jpg",
+            "publishedAt": "2024-06-24T10:00:17Z",
+            "content": "While NASA and Boeing are focused on finishing the first astronaut mission aboard the Starliner spacecraft early next month, what happens next is already on everyone's mind.\r\nBoeing's Starliner capsu… [+7521 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Nectar Gan, Yong Xiong",
+            "title": "Suspected Chinese rocket debris seen falling over village after launch, video shows - CNN",
+            "description": "Suspected debris from a Chinese rocket was seen plummeting to the ground over a village in southwest China on Saturday, leaving a trail of bright yellow smoke and sending villagers running, according to videos on Chinese social media and sent to CNN by a loca…",
+            "url": "https://www.cnn.com/2024/06/24/china/china-rocket-debris-falls-over-village-intl-hnk/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/still-20735313-3655-752-still-16x9.jpg?c=16x9&q=w_800,c_fill",
+            "publishedAt": "2024-06-24T09:44:00Z",
+            "content": "Suspected debris from a Chinese rocket was seen plummeting to the ground over a village in southwest China on Saturday, leaving a trail of bright yellow smoke and sending villagers running, according… [+5569 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": "Reuters",
+            "title": "Kremlin blames US for 'barbaric' ATACMS missile attack on Crimea - Reuters",
+            "description": null,
+            "url": "https://www.reuters.com/world/europe/kremlin-blames-us-barbaric-atacms-missile-attack-crimea-2024-06-24/",
+            "urlToImage": null,
+            "publishedAt": "2024-06-24T09:38:00Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "ABC27"
+            },
+            "author": "Brett Thackara",
+            "title": "Heat wave breaks today as humidity drops to start the week - ABC27",
+            "description": "Thanks to yesterday’s cold front that did bring a few showers and storms to the region, the heat wave will finally break today! That means the 7-day heat wave will finally come to an end. Expect sunny skies, cooler temperatures, and low humidity today with br…",
+            "url": "https://www.abc27.com/weather/heat-wave-breaks-today-as-humidity-drops-to-start-the-week/",
+            "urlToImage": "https://www.abc27.com/wp-content/uploads/sites/55/2024/06/Bretts-Forecast-9.png?w=1280",
+            "publishedAt": "2024-06-24T09:27:09Z",
+            "content": "Rainfall this week might come on Wednesday and again by the weekend...TODAY: Sunny, Cooler, &amp; Breezy. Hi 85. Winds: NW 10-15 mph. Gusts to 35 mph.\r\nTONIGHT: Clear &amp; Cooler, Winds Relax. Lo 64… [+1368 chars]"
+        },
+        {
+            "source": {
+                "id": "politico",
+                "name": "Politico"
+            },
+            "author": "POLITICO",
+            "title": "Inside the $100-million plan to restore abortion rights in America - POLITICO",
+            "description": null,
+            "url": "https://www.politico.com/news/2024/06/24/abortion-rights-advocates-launch-100-million-campaign-00164528",
+            "urlToImage": null,
+            "publishedAt": "2024-06-24T09:01:00Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Lauren Izso, Mohammed Tawfeeq",
+            "title": "‘Intense phase of war with Hamas about to end,’ focus to shift to Lebanon border, Netanyahu says - CNN",
+            "description": "Israeli Prime Minister Benjamin Netanyahu said Sunday that the “intense phase of the war with Hamas (in Gaza) is about to end,” and that the military’s focus could then shift to Israel’s northern border with Lebanon.",
+            "url": "https://www.cnn.com/2024/06/23/middleeast/intense-phase-hamas-war-end-netanyahu-lebanon-intl-latam/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2156070578.jpg?c=16x9&q=w_800,c_fill",
+            "publishedAt": "2024-06-24T08:05:00Z",
+            "content": "Israeli Prime Minister Benjamin Netanyahu said Sunday that the intense phase of the war with Hamas (in Gaza) is about to end, and that the militarys focus could then shift to Israels northern border … [+5757 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Darya Tarasova, Jen Deaton, Mariya Knight",
+            "title": "Gunmen kill police, priest in attacks on places of worship in Russia’s Dagestan - CNN",
+            "description": "Gunmen opened fire on places of worship in two cities of Russia’s southernmost Dagestan province on Sunday, killing at least 15 police officers, an Orthodox priest and an unknown number of civilians, in what appeared to be a coordinated attack.",
+            "url": "https://www.cnn.com/2024/06/23/europe/dagestan-synagogue-attack-russia-intl-latam/index.html",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/still-20734479-1586-595-still-copy.jpg?c=16x9&q=w_800,c_fill",
+            "publishedAt": "2024-06-24T05:16:00Z",
+            "content": "Gunmen opened fire on places of worship in two cities of Russias southernmost Dagestan province on Sunday, killing at least 15 police officers, an Orthodox priest and an unknown number of civilians, … [+7323 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Suntimes.com"
+            },
+            "author": "Georgia Nicols",
+            "title": "Horoscope for Monday, June 24, 2024 - Chicago Sun-Times",
+            "description": null,
+            "url": "https://chicago.suntimes.com/horoscopes/2024/06/24/horoscopes-today-monday-june-24-2024",
+            "urlToImage": "https://cst.brightspotcdn.com/dims4/default/2145dbd/2147483647/strip/true/crop/870x497+0+67/resize/1461x834!/quality/90/?url=https%3A%2F%2Fchorus-production-cst-web.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fac%2Ffd%2F790f04b15195427014757adc0272%2Fgeorgia-nicols.jpg",
+            "publishedAt": "2024-06-24T05:01:10Z",
+            "content": "Moon Alert\r\nThere are no restrictions to shopping or important decisions. The moon is in Aquarius.\r\nAries (March 21-April 19)\r\nThis is an excellent day to begin your week. In particular, relations wi… [+3862 chars]"
+        }
+    ]
+}
+
