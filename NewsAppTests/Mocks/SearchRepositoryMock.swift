@@ -11,10 +11,10 @@ import Combine
 
 class SearchRepositoryMock {
     private var searchService : SearchServiceMock
-    private var cache : SearchStorageProtocol
+    private var cache : SearchStorage
     private var networkReachabilityManager : NetworkReachabilityMock
     
-    init(searchService: SearchServiceMock,cache : SearchStorageProtocol,
+    init(searchService: SearchServiceMock,cache : SearchStorage,
         networkReachabilityManager : NetworkReachabilityMock) {
         self.searchService = searchService
         self.cache = cache

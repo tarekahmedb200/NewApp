@@ -7,9 +7,7 @@
 
 import Foundation
 
-
 enum DateFormats {
-    
     /// yyyy-MM-dd'T'HH:mm:ssZ
     /// 2024-06-21T21:14:38Z
     case fullFormat
@@ -20,7 +18,4 @@ enum DateFormats {
               return "yyyy-MM-dd'T'HH:mm:ssZ"
         }
     }
-    
-    
-    
 }

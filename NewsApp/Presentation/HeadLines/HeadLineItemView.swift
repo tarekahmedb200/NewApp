@@ -25,7 +25,6 @@ struct HeadLineItemView: View {
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
                     
-                    
                     Text(viewModel.source)
                         .font(.title3)
                     
@@ -46,7 +45,7 @@ struct HeadLineItemView: View {
                         .aspectRatio(contentMode: .fill)
                 }
             }
-            .frame(width:UIScreen.main.bounds.width - 20 ,height:500)
+            .frame(width:300 ,height:500)
             .clipShape(RoundedRectangle(cornerRadius: 10))
     }
     

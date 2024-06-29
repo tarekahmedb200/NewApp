@@ -13,7 +13,7 @@ final class SearchUseCaseTest: XCTestCase {
 
     private var cancellables: Set<AnyCancellable>!
     private let searchedWord = "disney"
-    private var searchCache: SearchStorageProtocol!
+    private var searchCache: SearchStorage!
     private var searchService: SearchServiceMock!
     private var searchRepository: SearchRepositoryMock!
     private var networkManager: NetworkReachabilityMock!
@@ -28,7 +28,6 @@ final class SearchUseCaseTest: XCTestCase {
         searchCache.deleteAllArticles(word: searchedWord)
         
         searchService = SearchServiceMock()
-        
     }
     
     override func tearDown() {
@@ -48,7 +47,7 @@ final class SearchUseCaseTest: XCTestCase {
         searchRepository = SearchRepositoryMock(searchService: searchService, cache: searchCache, networkReachabilityManager: networkManager)
         
         let searchUseCase =
-        DefaultSearchUseCaseImplementation(searchRepository: searchRepository)
+        SearchUseCaseImplementation(searchRepository: searchRepository)
         
         //before fetching data
         XCTAssertTrue(try searchCache.fetchSearchedArticles(word: searchedWord).count == 0)

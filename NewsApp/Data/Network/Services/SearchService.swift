@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-protocol SearchServiceProtocol {
+protocol SearchService {
     func search(word:String,page:Int) -> AnyPublisher<ArticleResponseDTO,Error>
 }
 
-class SearchService {
+class SearchServiceImplementation {
     private var apiManager: APIManagerProtocol
     
     init(apiManager: APIManagerProtocol = APIManager()) {
@@ -20,7 +20,7 @@ class SearchService {
     }
 }
 
-extension SearchService : SearchServiceProtocol {
+extension SearchServiceImplementation : SearchService {
     func search(word:String,page:Int) -> AnyPublisher<ArticleResponseDTO,Error> {
         return self.apiManager.initRequest(with: SearchRequest.fetchEverthing(search: word, page: page), type: ArticleResponseDTO.self)
     }

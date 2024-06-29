@@ -12,13 +12,13 @@ import Combine
 final class SearchViewModelTestCase: XCTestCase {
 
     private var cancellables: Set<AnyCancellable>!
-    private var headLinesCache: HeadLinesStorageProtocol!
+    private var headLinesCache: HeadLinesStorage!
     private var headLinesFetcherService :HeadLinesFetcherServiceMock!
     private var headLinesRepository : HeadLinesRepository!
-    private var fetchHeadLinesUseCase : FetchHeadLinesUseCaseProtocol!
+    private var fetchHeadLinesUseCase : FetchHeadLinesUseCase!
     
     private let searchedWord = "disney"
-    private var searchCache: SearchStorageProtocol!
+    private var searchCache: SearchStorage!
     private var searchService: SearchServiceMock!
     private var searchRepository: SearchRepositoryMock!
     private var searchUseCase : SearchUseCase!
@@ -72,10 +72,10 @@ final class SearchViewModelTestCase: XCTestCase {
         
         headLinesRepository = HeadLinesRepositoryMock(headLinesFetcherService: headLinesFetcherService, cahce: headLinesCache, networkReachabilityManager: networkManager)
         
-        fetchHeadLinesUseCase =  DefaultFetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
+        fetchHeadLinesUseCase =  FetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
         
         searchRepository = SearchRepositoryMock(searchService: searchService, cache: searchCache, networkReachabilityManager: networkManager)
-        searchUseCase = DefaultSearchUseCaseImplementation(searchRepository: searchRepository)
+        searchUseCase = SearchUseCaseImplementation(searchRepository: searchRepository)
         
         viewModel = SearchViewModel(fetchHeadLinesUseCaseProtocol: fetchHeadLinesUseCase, searchUseCase: searchUseCase, coordinator: SearchCoordinator(parent: HomeCoordinator()))
         
@@ -104,10 +104,10 @@ final class SearchViewModelTestCase: XCTestCase {
         networkManager = NetworkReachabilityMock(isReachable: false)
         
         headLinesRepository = HeadLinesRepositoryMock(headLinesFetcherService: headLinesFetcherService, cahce: headLinesCache, networkReachabilityManager: networkManager)
-        fetchHeadLinesUseCase =  DefaultFetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
+        fetchHeadLinesUseCase =  FetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
         
         searchRepository = SearchRepositoryMock(searchService: searchService, cache: searchCache, networkReachabilityManager: networkManager)
-        searchUseCase = DefaultSearchUseCaseImplementation(searchRepository: searchRepository)
+        searchUseCase = SearchUseCaseImplementation(searchRepository: searchRepository)
         
         viewModel = SearchViewModel(fetchHeadLinesUseCaseProtocol: fetchHeadLinesUseCase, searchUseCase: searchUseCase, coordinator: SearchCoordinator(parent: HomeCoordinator()))
         
@@ -137,10 +137,10 @@ final class SearchViewModelTestCase: XCTestCase {
         networkManager = NetworkReachabilityMock(isReachable: true)
         
         headLinesRepository = HeadLinesRepositoryMock(headLinesFetcherService: headLinesFetcherService, cahce: headLinesCache, networkReachabilityManager: networkManager)
-        fetchHeadLinesUseCase = DefaultFetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
+        fetchHeadLinesUseCase = FetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
         
         searchRepository = SearchRepositoryMock(searchService: searchService, cache: searchCache, networkReachabilityManager: networkManager)
-        searchUseCase = DefaultSearchUseCaseImplementation(searchRepository: searchRepository)
+        searchUseCase = SearchUseCaseImplementation(searchRepository: searchRepository)
         
         viewModel = SearchViewModel(fetchHeadLinesUseCaseProtocol: fetchHeadLinesUseCase, searchUseCase: searchUseCase, coordinator: SearchCoordinator(parent: HomeCoordinator()))
         

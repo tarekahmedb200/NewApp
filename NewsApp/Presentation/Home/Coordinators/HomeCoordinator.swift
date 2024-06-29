@@ -23,6 +23,4 @@ class HomeCoordinator: ObservableObject {
         self.headLinesCoordinator = HeadLinesCoordinator(parent: self)
         self.searchCoordinator = SearchCoordinator(parent: self)
     }
-    
-
 }

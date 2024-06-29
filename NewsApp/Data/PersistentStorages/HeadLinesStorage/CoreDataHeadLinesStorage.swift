@@ -17,7 +17,7 @@ final class CoreDataHeadLinesStorage {
     }
 }
 
-extension CoreDataHeadLinesStorage: HeadLinesStorageProtocol {
+extension CoreDataHeadLinesStorage: HeadLinesStorage {
     
     func deleteAllArticles() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ArticleEntity")

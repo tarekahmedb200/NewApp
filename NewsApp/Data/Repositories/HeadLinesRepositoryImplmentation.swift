@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-class DefaultHeadLinesRepositoryImplmentation {
-    private var headLinesFetcherService : HeadLinesFetcherServiceProtocol
-    private var cache : HeadLinesStorageProtocol
-    private var networkReachabilityManager : NetworkReachabilityManager
+class HeadLinesRepositoryImplmentation {
+    private var headLinesFetcherService: HeadLinesFetcherService
+    private var cache: HeadLinesStorage
+    private var networkReachabilityManager: NetworkReachabilityManager
     
-    init(headLinesFetcherService : HeadLinesFetcherServiceProtocol,cahce:HeadLinesStorageProtocol) {
+    init(headLinesFetcherService : HeadLinesFetcherService,cahce:HeadLinesStorage) {
         self.headLinesFetcherService = headLinesFetcherService
         self.cache = cahce
         networkReachabilityManager = NetworkReachabilityManager()
@@ -21,7 +21,7 @@ class DefaultHeadLinesRepositoryImplmentation {
     }
 }
 
-extension DefaultHeadLinesRepositoryImplmentation : HeadLinesRepository {
+extension HeadLinesRepositoryImplmentation : HeadLinesRepository {
     func fetchHeadLines() -> AnyPublisher<ArticleResponseDTO, any Error> {
         
         do {

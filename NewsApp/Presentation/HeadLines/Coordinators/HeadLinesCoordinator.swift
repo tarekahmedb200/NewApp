@@ -17,9 +17,9 @@ class HeadLinesCoordinator: ObservableObject, Identifiable {
     init(parent: HomeCoordinator) {
         self.parent = parent
         
-        let cache: HeadLinesStorageProtocol = CoreDataHeadLinesStorage()
-        let headLinesRepository : HeadLinesRepository = DefaultHeadLinesRepositoryImplmentation(headLinesFetcherService: HeadLinesFetcherService(), cahce: cache)
-        let fetchHeadLinesUseCaseProtocol =  DefaultFetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
+        let cache: HeadLinesStorage = CoreDataHeadLinesStorage()
+        let headLinesRepository : HeadLinesRepository = HeadLinesRepositoryImplmentation(headLinesFetcherService: HeadLinesFetcherServiceImplementation(), cahce: cache)
+        let fetchHeadLinesUseCaseProtocol =  FetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
         self.viewModel = HeadLinesViewModel(fetchHeadLinesUseCaseProtocol: fetchHeadLinesUseCaseProtocol, coordinator: self)
         
     }

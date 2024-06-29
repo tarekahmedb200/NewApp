@@ -29,6 +29,12 @@ struct CoreDataStack {
         })
         
         persistentContainer.viewContext.automaticallyMergesChangesFromParent = true 
+        
+        
+        print("path...->")
+        print(persistentContainer.persistentStoreCoordinator.persistentStores.first?.url)
+
+        
     }
     
 }

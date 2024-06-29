@@ -11,10 +11,10 @@ import Combine
 
 class HeadLinesRepositoryMock {
     private var headLinesFetcherService: HeadLinesFetcherServiceMock
-    private var cache: HeadLinesStorageProtocol
+    private var cache: HeadLinesStorage
     private var networkReachabilityManager: NetworkReachabilityMock
     
-    init(headLinesFetcherService : HeadLinesFetcherServiceMock,cahce:HeadLinesStorageProtocol,
+    init(headLinesFetcherService : HeadLinesFetcherServiceMock,cahce:HeadLinesStorage,
         networkReachabilityManager : NetworkReachabilityMock) {
         self.headLinesFetcherService = headLinesFetcherService
         self.cache = cahce

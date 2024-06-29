@@ -10,11 +10,7 @@ import SwiftUI
 
 struct HomeCoordinatorView: View {
 
-    // MARK: Stored Properties
-
     @ObservedObject var coordinator: HomeCoordinator
-
-    // MARK: Views
 
     var body: some View {
         TabView(selection: $coordinator.tab) {

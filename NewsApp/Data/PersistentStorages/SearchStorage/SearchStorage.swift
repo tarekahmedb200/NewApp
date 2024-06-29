@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SearchStorageProtocol {
+protocol SearchStorage {
     func fetchSearchedArticles(word:String) throws -> [ArticleDTO]
     func save(word:String,searchedArticles: [ArticleDTO])
     func deleteAllArticles(word:String)

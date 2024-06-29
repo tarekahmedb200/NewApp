@@ -10,7 +10,6 @@ import Foundation
 class ArticleDetailsViewModel {
     
     var title: String
-    var source: String
     var hoursAgo: String?
     var posterImagePathUrl: URL?
     let author: String
@@ -20,13 +19,12 @@ class ArticleDetailsViewModel {
    
     init(article: Article) {
         self.title = article.title
-        self.source = article.sourceName
         if let publishedDate = article.publishedAt.toDate(withFormat: .fullFormat),
            let hoursDiff = Date.getDifferenceBetweenDate(oldDate: publishedDate, newDate: Date(), with: [.hour]).hour {
             self.hoursAgo = "\(hoursDiff) hours ago"
         }
         self.posterImagePathUrl = URL(string: article.urlToImage)
-        self.author = article.author
+        self.author = article.author + ", " + article.sourceName
         self.description = article.description
         self.content = article.content
         self.url = URL(string:article.url) 

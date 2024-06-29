@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-protocol HeadLinesFetcherServiceProtocol {
+protocol HeadLinesFetcherService {
     func fetchHeadLines() -> AnyPublisher<ArticleResponseDTO,Error>
 }
 
-class HeadLinesFetcherService {
+class HeadLinesFetcherServiceImplementation {
     private var apiManager: APIManagerProtocol
     
     init(apiManager: APIManagerProtocol = APIManager()) {
@@ -21,7 +21,7 @@ class HeadLinesFetcherService {
     
 }
 
-extension HeadLinesFetcherService : HeadLinesFetcherServiceProtocol {
+extension HeadLinesFetcherServiceImplementation : HeadLinesFetcherService {
     func fetchHeadLines() -> AnyPublisher<ArticleResponseDTO,Error> {
         return self.apiManager.initRequest(with:  HeadLinesRequest.fetchHeadLines, type: ArticleResponseDTO.self)
     }

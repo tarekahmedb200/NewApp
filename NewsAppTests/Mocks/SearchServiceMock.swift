@@ -9,7 +9,7 @@ import Foundation
 import Combine
 @testable import NewsApp
 
-class SearchServiceMock : SearchServiceProtocol {
+class SearchServiceMock : SearchService {
     func search(word:String,page:Int) -> AnyPublisher<ArticleResponseDTO, any Error> {
         
         var articleResponse : ArticleResponseDTO? = MockJSONFetcher.readJSONFromFile(fileName: "SearchMockData", fileType: "json")

@@ -20,7 +20,7 @@ class HeadlineStorageMock {
     
 }
 
-extension HeadlineStorageMock : HeadLinesStorageProtocol {
+extension HeadlineStorageMock : HeadLinesStorage {
     
     func deleteAllArticles() {
         

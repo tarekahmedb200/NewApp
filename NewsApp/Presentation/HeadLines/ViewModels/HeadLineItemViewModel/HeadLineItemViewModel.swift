@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HeadLineItemViewModel {
+class HeadLineItemViewModel : ObservableObject {
     var title: String
     var source: String
     var publishedDate: String?

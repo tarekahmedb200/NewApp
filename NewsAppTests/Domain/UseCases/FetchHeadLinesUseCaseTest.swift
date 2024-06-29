@@ -12,7 +12,7 @@ import Combine
 final class FetchHeadLinesUseCaseTest: XCTestCase {
 
     private var cancellables: Set<AnyCancellable>!
-    private var cache: HeadLinesStorageProtocol!
+    private var cache: HeadLinesStorage!
     private var headLinesFetcherService :HeadLinesFetcherServiceMock!
     private var networkManager : NetworkReachabilityMock!
     
@@ -41,7 +41,7 @@ final class FetchHeadLinesUseCaseTest: XCTestCase {
         
         let headLinesRepository : HeadLinesRepository = HeadLinesRepositoryMock(headLinesFetcherService: headLinesFetcherService, cahce: cache, networkReachabilityManager: networkManager)
         
-        let fetchHeadLinesUseCase =  DefaultFetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
+        let fetchHeadLinesUseCase =  FetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
         
         //before fetching data
         XCTAssertTrue(try cache.fetchArticles().count == 0)

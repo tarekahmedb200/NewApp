@@ -12,7 +12,7 @@ struct ArticleResponse {
     var articles: [Article]
 }
 
-struct Article: Identifiable {
+struct Article: Identifiable , Hashable {
     var id = UUID()
     let title: String
     let author: String

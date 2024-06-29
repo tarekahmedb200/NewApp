@@ -10,7 +10,7 @@ import Combine
 @testable import NewsApp
 
 
-class HeadLinesFetcherServiceMock : HeadLinesFetcherServiceProtocol
+class HeadLinesFetcherServiceMock : HeadLinesFetcherService
 {
     func fetchHeadLines() -> AnyPublisher<ArticleResponseDTO, any Error> {
         let articleResponse : ArticleResponseDTO? = MockJSONFetcher.readJSONFromFile(fileName: "HeadLinesMockData", fileType: "json")

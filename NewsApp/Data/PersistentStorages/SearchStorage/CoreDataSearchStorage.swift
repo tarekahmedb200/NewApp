@@ -17,8 +17,7 @@ final class CoreDataSearchStorage {
     }
 }
 
-extension CoreDataSearchStorage: SearchStorageProtocol {
-    
+extension CoreDataSearchStorage: SearchStorage {
     
     func deleteAllArticles(word:String) {
         
@@ -37,7 +36,6 @@ extension CoreDataSearchStorage: SearchStorageProtocol {
     
     func fetchSearchedArticles(word:String) throws -> [ArticleDTO]
     {
-        
         let fetchRequest = NSFetchRequest<SearchEntity>(entityName: "SearchEntity")
         
         fetchRequest.predicate = NSPredicate(format: "wordQuery MATCHES %@", word)
@@ -50,18 +48,20 @@ extension CoreDataSearchStorage: SearchStorageProtocol {
     
     func save(word:String,searchedArticles: [ArticleDTO]) {
         
+        var tempSearchEntity : SearchEntity
+        
         do {
-            var searchedArticlesEntities = [ArticleEntity]()
             
-            let searchEntity = SearchEntity(context: context)
-            
-            searchEntity.wordQuery = word
-            
-            for article in searchedArticles {
-                searchedArticlesEntities.append(article.toEntity(in: context))
+            if let searchEntity = try fetchSearchEntity(word: word) {
+                tempSearchEntity = searchEntity
+            }else {
+                tempSearchEntity = SearchEntity(context: context)
+                tempSearchEntity.wordQuery = word
             }
-            
-            searchEntity.articles = NSSet(array: searchedArticlesEntities)
+           
+            for article in searchedArticles {
+                tempSearchEntity.addToArticles(article.toEntity(in: context))
+            }
             
             try context.save()
             
@@ -70,4 +70,16 @@ extension CoreDataSearchStorage: SearchStorageProtocol {
         }
         
     }
+    
+    private func fetchSearchEntity(word:String) throws -> SearchEntity?
+    {
+        
+        let fetchRequest = NSFetchRequest<SearchEntity>(entityName: "SearchEntity")
+        
+        fetchRequest.predicate = NSPredicate(format: "wordQuery MATCHES %@", word)
+        
+        let result = try context.fetch(fetchRequest).first
+        return result
+    }
+    
 }

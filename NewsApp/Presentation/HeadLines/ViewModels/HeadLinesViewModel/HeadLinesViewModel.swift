@@ -14,10 +14,10 @@ class HeadLinesViewModel: ObservableObject {
     @Published var articles : [Article] = []
     var cancelable = Set<AnyCancellable>()
     
-    private let fetchHeadLinesUseCaseProtocol: FetchHeadLinesUseCaseProtocol
+    private let fetchHeadLinesUseCaseProtocol: FetchHeadLinesUseCase
     private var coordinator : HeadLinesCoordinator
     
-    init(fetchHeadLinesUseCaseProtocol: FetchHeadLinesUseCaseProtocol,coordinator : HeadLinesCoordinator) {
+    init(fetchHeadLinesUseCaseProtocol: FetchHeadLinesUseCase,coordinator : HeadLinesCoordinator) {
         self.coordinator = coordinator
         self.fetchHeadLinesUseCaseProtocol = fetchHeadLinesUseCaseProtocol
         fetchHeadLines()

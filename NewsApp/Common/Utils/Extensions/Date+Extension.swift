@@ -16,12 +16,7 @@ extension Date {
     
     static func getDifferenceBetweenDate(oldDate:Date,newDate:Date,with components: Set<Calendar.Component>) -> DateComponents {
         let diffComponents = Calendar.current.dateComponents(components, from: oldDate, to: newDate)
-        let hours = diffComponents.hour
-        let days = diffComponents.day
+        
         return diffComponents
     }
-    
-    
-    
-    
 }

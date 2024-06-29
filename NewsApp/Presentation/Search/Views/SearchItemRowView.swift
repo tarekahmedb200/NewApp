@@ -54,7 +54,3 @@ struct SearchItemRowView: View {
     }
 }
 
-
-//#Preview {
-//    ArticleRowView()
-//}

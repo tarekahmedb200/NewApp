@@ -10,7 +10,7 @@ import SwiftUI
 import Kingfisher
 
 struct ArticleDetailsView: View {
-    @Namespace private var animation
+    @State var isAnimation = false
     
     var viewModel: ArticleDetailsViewModel
     
@@ -26,6 +26,14 @@ struct ArticleDetailsView: View {
                 
                 contentView
             }
+            .opacity(isAnimation ? 1 : 0)
+            .onAppear(perform: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                    withAnimation(.bouncy) {
+                        isAnimation = true
+                    }
+                }
+            })
             .frame(width: UIScreen.main.bounds.width)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -61,14 +69,17 @@ struct ArticleDetailsView: View {
                 .font(.system(size: 25,weight: .bold))
                 .foregroundStyle(.black)
             
-            Text(viewModel.hoursAgo ?? "")
-                .font(.title3)
+            Spacer()
             
-            HStack {
+            Group {
+                Text(viewModel.hoursAgo ?? "")
+                
                 Text(viewModel.author)
-                Text(viewModel.source)
             }
-            .font(.title2)
+            .font(.headline)
+            .foregroundStyle(.gray)
+            .lineLimit(2)
+            
         }
         .padding()
     }
@@ -83,11 +94,3 @@ struct ArticleDetailsView: View {
     }
 }
 
-//#Preview {
-//    ReceipeDetailsView(viewModel: ReceipeDetailsViewModel(
-//        objectReceipe: Receipe.mockSearchedReceipes.first!,
-//        receipeDetailsFetcher: ReceipeDetailsFetcherMock(),
-//        receipeDetailsStore: ReceipeDetailsStore(context:
-//                                                    PersistenceController.preview.container.viewContext)
-//        ,imageRemoteService: ImageRemoteService(requestManager: DataAPIManger()), imageLocalService: ImageLocalService()))
-//}

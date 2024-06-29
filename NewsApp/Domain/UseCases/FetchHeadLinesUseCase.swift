@@ -8,21 +8,20 @@
 import Foundation
 import Combine
 
-protocol FetchHeadLinesUseCaseProtocol {
+protocol FetchHeadLinesUseCase {
     func execute() -> AnyPublisher<ArticleResponseDTO, Error>
 }
 
-final class DefaultFetchHeadLinesUseCaseImplementation  {
+final class FetchHeadLinesUseCaseImplementation  {
     
     private let headLinesRepository: HeadLinesRepository
   
     init(headLinesRepository: HeadLinesRepository) {
         self.headLinesRepository = headLinesRepository
     }
-    
 }
 
-extension DefaultFetchHeadLinesUseCaseImplementation : FetchHeadLinesUseCaseProtocol {
+extension FetchHeadLinesUseCaseImplementation : FetchHeadLinesUseCase {
     func execute() -> AnyPublisher<ArticleResponseDTO, any Error> {
         return self.headLinesRepository.fetchHeadLines()
     }

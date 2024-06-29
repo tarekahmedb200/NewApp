@@ -15,7 +15,7 @@ final class HeadLineItemViewModelTestCase: XCTestCase {
     private var cache: CoreDataHeadLinesStorage!
     private var headLinesFetcherService :HeadLinesFetcherServiceMock!
     private var headLinesRepository : HeadLinesRepository!
-    private var fetchHeadLinesUseCase : FetchHeadLinesUseCaseProtocol!
+    private var fetchHeadLinesUseCase : FetchHeadLinesUseCase!
     private var networkManager : NetworkReachabilityMock!
     
     override func setUp() {
@@ -48,7 +48,7 @@ final class HeadLineItemViewModelTestCase: XCTestCase {
         networkManager = NetworkReachabilityMock(isReachable: false)
         
         headLinesRepository = HeadLinesRepositoryMock(headLinesFetcherService: headLinesFetcherService, cahce: cache, networkReachabilityManager: networkManager)
-        fetchHeadLinesUseCase =  DefaultFetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
+        fetchHeadLinesUseCase =  FetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
         
         //saving mock data
         cache.save(articles: [PreviewArticleDTO.previewArticles.first!])

@@ -12,7 +12,7 @@ protocol SearchUseCase {
     func execute(word:String,page:Int) -> AnyPublisher<ArticleResponseDTO, Error>
 }
 
-final class DefaultSearchUseCaseImplementation  {
+final class SearchUseCaseImplementation {
     
     private let searchRepository: SearchRepository
   
@@ -22,7 +22,7 @@ final class DefaultSearchUseCaseImplementation  {
     
 }
 
-extension DefaultSearchUseCaseImplementation : SearchUseCase {
+extension SearchUseCaseImplementation : SearchUseCase {
     func execute(word:String,page:Int) -> AnyPublisher<ArticleResponseDTO, any Error> {
         return self.searchRepository.fetchSearchedArticles(word: word, page: page)
     }

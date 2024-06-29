@@ -10,20 +10,15 @@ import SwiftUI
 
 struct HeadLinesCoordinatorView: View {
 
-    // MARK: Stored Properties
-
     @ObservedObject var coordinator: HeadLinesCoordinator
-
-    // MARK: Views
 
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             if let viewModel = coordinator.viewModel {
                 HeadLinesView(viewModel: viewModel)
             }
         }
-        
     }
 
 }

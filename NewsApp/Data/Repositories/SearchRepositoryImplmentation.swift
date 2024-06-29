@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-class DefaultSearchRepositoryImplmentation {
-    private var searchService : SearchServiceProtocol
-    private var cache : SearchStorageProtocol
+class SearchRepositoryImplmentation {
+    private var searchService : SearchService
+    private var cache : SearchStorage
     private var networkReachabilityManager : NetworkReachabilityManager
     
-    init(searchService : SearchServiceProtocol, cache: SearchStorageProtocol) {
+    init(searchService : SearchService, cache: SearchStorage) {
         self.searchService = searchService
         self.cache = cache
         networkReachabilityManager = NetworkReachabilityManager()
@@ -21,7 +21,7 @@ class DefaultSearchRepositoryImplmentation {
     }
 }
 
-extension DefaultSearchRepositoryImplmentation : SearchRepository {
+extension SearchRepositoryImplmentation : SearchRepository {
    
     func fetchSearchedArticles(word:String,page:Int) -> AnyPublisher<ArticleResponseDTO, any Error> {
         
@@ -34,10 +34,10 @@ extension DefaultSearchRepositoryImplmentation : SearchRepository {
                     .setFailureType(to: Error.self)
                     .eraseToAnyPublisher()
             }
+            
             return searchService.search(word: word, page: page)
                 .handleEvents(receiveOutput: { [weak self] articleResponseDTO in
                     let articles = articleResponseDTO.articles
-                    self?.cache.deleteAllArticles(word: word)
                     self?.cache.save(word:word,searchedArticles: articles)
                 })
                 .eraseToAnyPublisher()

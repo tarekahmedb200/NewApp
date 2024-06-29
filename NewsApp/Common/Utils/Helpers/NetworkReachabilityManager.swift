@@ -13,8 +13,7 @@ protocol NetworkReachability {
   func startMonitoring()
 }
 
-
-class NetworkReachabilityManager: ObservableObject , NetworkReachability {
+final class NetworkReachabilityManager: ObservableObject , NetworkReachability {
     
     @Published var isReachable: Bool = false
     

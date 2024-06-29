@@ -9,22 +9,28 @@ import Foundation
 import Combine
 
 class SearchViewModel : ObservableObject {
-    @Published var articles : [Article] = []
+    @Published var articles: [Article] = []
     
-    @Published var searchText : String = ""
+    @Published var searchText: String = ""
     @Published var page: Int = 1
-    @Published var isSearching : Bool = false
+    @Published var isSearching: Bool = false
+    var isOffline: Bool {
+        return !networkManager.isReachable
+    }
     private var cancelable = Set<AnyCancellable>()
-    private var currentSearch : String = ""
+    private var currentSearch: String = ""
     
-    private let fetchHeadLinesUseCase: FetchHeadLinesUseCaseProtocol
+    private let fetchHeadLinesUseCase: FetchHeadLinesUseCase
     private let searchUseCase: SearchUseCase
-    private var coordinator : SearchCoordinator
+    private var coordinator: SearchCoordinator
+    private var networkManager : NetworkReachability
     
-    init(fetchHeadLinesUseCaseProtocol: FetchHeadLinesUseCaseProtocol,searchUseCase:SearchUseCase,coordinator : SearchCoordinator) {
+    init(fetchHeadLinesUseCaseProtocol: FetchHeadLinesUseCase,searchUseCase:SearchUseCase,coordinator : SearchCoordinator) {
         self.coordinator = coordinator
         self.fetchHeadLinesUseCase = fetchHeadLinesUseCaseProtocol
         self.searchUseCase = searchUseCase
+        self.networkManager = NetworkReachabilityManager()
+        networkManager.startMonitoring()
         observeSearchText()
     }
     
@@ -53,7 +59,6 @@ class SearchViewModel : ObservableObject {
         
         Publishers.CombineLatest($searchText, $page)
             .filter { text , page in
-                print("page....-> \(page)")
                 return !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
             }
             .map { [weak self] text , page  -> (String,Int) in
@@ -66,7 +71,7 @@ class SearchViewModel : ObservableObject {
                 return (text,page)
             }
             .removeDuplicates { previous , next in
-                previous.1 == next.1
+                previous == next
             }
             .setFailureType(to: Error.self)
             .map {  [weak self] text , page -> AnyPublisher<ArticleResponseDTO, Error>? in

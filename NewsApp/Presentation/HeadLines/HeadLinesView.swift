@@ -9,32 +9,58 @@ import SwiftUI
 
 struct HeadLinesView: View {
     
-    
-    @StateObject var viewModel : HeadLinesViewModel
+    @StateObject var viewModel: HeadLinesViewModel
+    @State var currentIndex: Int = 0
+    @State var isAnimation = false
+    @State var yTransition : CGFloat = -50.0
     
     var body: some View {
         
-        ScrollView(.horizontal,showsIndicators: false) {
-            LazyHStack {
-                ForEach(viewModel.articles) { article in
-                    NavigationLink {
-                        if let articleDetailsView = viewModel.getArticleDetailsView(article: article) {
-                            articleDetailsView
-                        }
-                    } label: {
-                        HeadLineItemView(viewModel: HeadLineItemViewModel(article: article))
-                            .shadow(radius: 10)
+        ZStack {
+            ForEach(0..<viewModel.articles.count,id:\.self) { index in
+                
+                NavigationLink {
+                    if let articleDetailsView = viewModel.getArticleDetailsView(article: viewModel.articles[currentIndex]) {
+                        articleDetailsView
                     }
+                } label: {
+                    HeadLineItemView(viewModel: HeadLineItemViewModel(article: viewModel.articles[index]))
+                        .opacity(currentIndex == index ? 1.0 : 0.5)
+                        .scaleEffect(currentIndex == index ? 1.2 : 0.8)
+                        .offset(x: CGFloat(index - currentIndex) * 300, y :yTransition)
+                        .opacity(isAnimation ? 1 : 0)
                 }
             }
-            .scrollTargetLayout()
         }
-        .scrollTargetBehavior(.viewAligned) // Set the behavior
-        .safeAreaPadding(.horizontal, 10)
-        
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                withAnimation(.bouncy) {
+                    isAnimation = true 
+                    yTransition *= 0
+                }
+            }
+        }
+        .navigationTitle("Headlines")
+        .navigationBarTitleDisplayMode(.large)
+        .highPriorityGesture(DragGesture(minimumDistance: 25)
+            .onEnded({ value in
+                let threshold : CGFloat = 50
+                
+                if value.translation.width > threshold {
+                    
+                    withAnimation {
+                        currentIndex = max(0, currentIndex - 1)
+                    }
+                    
+                } else if value.translation.width < -threshold {
+                    withAnimation {
+                        currentIndex = min(viewModel.articles.count - 1 , currentIndex + 1)
+                    }
+                }
+                
+            })
+        )
     }
+    
 }
 
-//#Preview {
-//    HeadLinesView(viewModel: HeadLinesViewModel(fetchHeadLinesUseCaseProtocol: DefaultFetchHeadLinesUseCaseImplementation(headLinesRepository: DefaultHeadLinesRepositoryImplmentation(ApiManager: APIManager()))))
-//}

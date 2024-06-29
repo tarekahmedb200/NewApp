@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HeadLinesStorageProtocol {
+protocol HeadLinesStorage {
     func fetchArticles() throws -> [ArticleDTO]
     func save(articles: [ArticleDTO])
     func deleteAllArticles()

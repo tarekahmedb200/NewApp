@@ -20,7 +20,7 @@ class SearchStorageMock {
     
 }
 
-extension SearchStorageMock : SearchStorageProtocol {
+extension SearchStorageMock : SearchStorage {
     
     func deleteAllArticles(word: String) {
         do {

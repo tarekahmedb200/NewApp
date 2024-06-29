@@ -16,13 +16,12 @@ class SearchCoordinator: ObservableObject {
     init(parent: HomeCoordinator) {
         self.parent = parent
         
-        let headLinesRepository : HeadLinesRepository = DefaultHeadLinesRepositoryImplmentation(headLinesFetcherService: HeadLinesFetcherService(), cahce:  CoreDataHeadLinesStorage())
-        let fetchHeadLinesUseCase =  DefaultFetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
+        let headLinesRepository: HeadLinesRepository = HeadLinesRepositoryImplmentation(headLinesFetcherService: HeadLinesFetcherServiceImplementation(), cahce:  CoreDataHeadLinesStorage())
+        let fetchHeadLinesUseCase =  FetchHeadLinesUseCaseImplementation(headLinesRepository: headLinesRepository)
        
-    
         let searchRepository : SearchRepository =
-        DefaultSearchRepositoryImplmentation(searchService: SearchService(), cache: CoreDataSearchStorage())
-        let searchUseCase = DefaultSearchUseCaseImplementation(searchRepository: searchRepository)
+        SearchRepositoryImplmentation(searchService: SearchServiceImplementation(), cache: CoreDataSearchStorage())
+        let searchUseCase = SearchUseCaseImplementation(searchRepository: searchRepository)
         
         self.searchViewModel = SearchViewModel(fetchHeadLinesUseCaseProtocol:fetchHeadLinesUseCase , searchUseCase: searchUseCase, coordinator: self)
         
@@ -36,5 +35,4 @@ class SearchCoordinator: ObservableObject {
         return nil
     }
     
-
 }
