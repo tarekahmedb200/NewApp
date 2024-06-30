@@ -19,13 +19,6 @@ it shows the last seen headlines offline and the searched artiles offline.
 - Clean Architecture
 - Coordinator Pattern
 
-![IMG_1489]()
-![IMG_1490]()
-![IMG_1491]()
-![IMG_1492]()
-
- 
-
 ## Screen Shots 
 
 <table>
