@@ -25,7 +25,7 @@ it shows the last seen headlines offline and the searched artiles offline.
  
  <tr>
  
-<td><img src="https://user-images.githubusercontent.com/35314267/167251713-0e2c1f4b-5482-419f-82b5-f4936b3e1d73.png](https://github.com/tarekahmedb200/NewApp/assets/35314267/59671d26-ef0c-45b1-9533-16b067807d6d.png" width="400" height="500"  /> </td>
+<td><img src="https://user-images.githubusercontent.com/35314267/167251713-0e2c1f4b-5482-419f-82b5-f4936b3e1d73.png" width="400" height="500"  /> </td>
 
 <td><img src="https://user-images.githubusercontent.com/35314267/167251716-21a54052-9e1a-41d7-9134-f8ccb229cc96.png](https://github.com/tarekahmedb200/NewApp/assets/35314267/f12fdd64-7a66-4bb9-8fe6-d7eea1444a01.png" width="400" height="500"  /> </td>
 
