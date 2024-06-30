@@ -27,7 +27,9 @@ extension HeadlineStorageMock : HeadLinesStorage {
         do {
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ArticleEntity")
             fetchRequest.includesPropertyValues = false // Optimize for deletion
-
+            
+            fetchRequest.predicate = NSPredicate(format: "isHeadLine == YES")
+            
             let objectsToDelete = try context.fetch(fetchRequest)
 
             for object in objectsToDelete {
@@ -43,6 +45,7 @@ extension HeadlineStorageMock : HeadLinesStorage {
     func fetchArticles() throws -> [ArticleDTO]
     {
         let fetchRequest = NSFetchRequest<ArticleEntity>(entityName: "ArticleEntity")
+        fetchRequest.predicate = NSPredicate(format: "isHeadLine == YES")
         let result = try context.fetch(fetchRequest)
         return result.map{$0.toDTO()}
     }
