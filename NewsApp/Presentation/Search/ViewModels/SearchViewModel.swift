@@ -41,7 +41,9 @@ class SearchViewModel : ObservableObject {
             .sink(receiveCompletion: {
                 print($0)
             }, receiveValue: { [weak self] articleResponseDTO in
-                self?.articles += articleResponseDTO.toDomain().articles
+                self?.articles += articleResponseDTO.toDomain().articles.sorted(by: {
+                    $0.title < $1.title
+                })
             })
             .store(in: &cancelable)
         
@@ -50,7 +52,9 @@ class SearchViewModel : ObservableObject {
             .sink {
                 print($0)
             } receiveValue: { [weak self] articleResponseDTO in
-                self?.articles = articleResponseDTO.toDomain().articles
+                self?.articles = articleResponseDTO.toDomain().articles.sorted(by: {
+                    $0.title < $1.title
+                })
             }
             .store(in: &cancelable)
     }

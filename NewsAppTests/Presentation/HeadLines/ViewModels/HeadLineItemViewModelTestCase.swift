@@ -23,7 +23,7 @@ final class HeadLineItemViewModelTestCase: XCTestCase {
         cancellables = []
         
         cache = CoreDataHeadLinesStorage(context: CoreDataStack.preview.persistentContainer.viewContext)
-        cache.deleteAllArticles()
+        cache.deleteAllHeadlines()
         
         headLinesFetcherService = HeadLinesFetcherServiceMock()
     }

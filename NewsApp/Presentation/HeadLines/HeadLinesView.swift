@@ -17,27 +17,30 @@ struct HeadLinesView: View {
     var body: some View {
         
         ZStack {
-            ForEach(0..<viewModel.articles.count,id:\.self) { index in
-                
-                NavigationLink {
-                    if let articleDetailsView = viewModel.getArticleDetailsView(article: viewModel.articles[currentIndex]) {
-                        articleDetailsView
+            
+            if viewModel.articles.count == 0 {
+                LoadingView()
+            }else {
+                ForEach(0..<viewModel.articles.count,id:\.self) { index in
+                    
+                    NavigationLink {
+                        if let articleDetailsView = viewModel.getArticleDetailsView(article: viewModel.articles[currentIndex]) {
+                            articleDetailsView
+                        }
+                    } label: {
+                        HeadLineItemView(viewModel: HeadLineItemViewModel(article: viewModel.articles[index]))
+                            .opacity(currentIndex == index ? 1.0 : 0.5)
+                            .scaleEffect(currentIndex == index ? 1.2 : 0.8)
+                            .offset(x: CGFloat(index - currentIndex) * 300, y :yTransition)
+                            .opacity(isAnimation ? 1 : 0)
                     }
-                } label: {
-                    HeadLineItemView(viewModel: HeadLineItemViewModel(article: viewModel.articles[index]))
-                        .opacity(currentIndex == index ? 1.0 : 0.5)
-                        .scaleEffect(currentIndex == index ? 1.2 : 0.8)
-                        .offset(x: CGFloat(index - currentIndex) * 300, y :yTransition)
-                        .opacity(isAnimation ? 1 : 0)
                 }
             }
         }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                withAnimation(.bouncy) {
-                    isAnimation = true 
-                    yTransition *= 0
-                }
+        .onChange(of: viewModel.articles) {
+            withAnimation(.bouncy) {
+                isAnimation = viewModel.articles.count > 0
+                yTransition *= viewModel.articles.count > 0 ? 0 : -50
             }
         }
         .navigationTitle("Headlines")

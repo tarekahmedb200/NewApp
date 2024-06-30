@@ -19,8 +19,9 @@ final class CoreDataHeadLinesStorage {
 
 extension CoreDataHeadLinesStorage: HeadLinesStorage {
     
-    func deleteAllArticles() {
+    func deleteAllHeadlines() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ArticleEntity")
+        fetchRequest.predicate = NSPredicate(format: "isHeadLine == YES")
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         
         do {
@@ -34,6 +35,7 @@ extension CoreDataHeadLinesStorage: HeadLinesStorage {
     func fetchArticles() throws -> [ArticleDTO]
     {
         let fetchRequest = NSFetchRequest<ArticleEntity>(entityName: "ArticleEntity")
+        fetchRequest.predicate = NSPredicate(format: "isHeadLine == YES")
         let result = try context.fetch(fetchRequest)
         return result.map{$0.toDTO()}
     }

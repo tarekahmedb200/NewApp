@@ -30,7 +30,9 @@ class HeadLinesViewModel: ObservableObject {
             .sink {
                 print($0)
             } receiveValue: { [weak self] articleDTOs in
-                self?.articles = articleDTOs.toDomain().articles
+                self?.articles = articleDTOs.toDomain().articles.sorted(by: {
+                    $0.title < $1.title
+                })
             }
             .store(in: &cancelable)
     }

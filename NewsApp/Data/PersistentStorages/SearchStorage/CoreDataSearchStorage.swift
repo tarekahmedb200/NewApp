@@ -48,7 +48,7 @@ extension CoreDataSearchStorage: SearchStorage {
     
     func save(word:String,searchedArticles: [ArticleDTO]) {
         
-        var tempSearchEntity : SearchEntity
+        var tempSearchEntity: SearchEntity
         
         do {
             
@@ -58,10 +58,13 @@ extension CoreDataSearchStorage: SearchStorage {
                 tempSearchEntity = SearchEntity(context: context)
                 tempSearchEntity.wordQuery = word
             }
-           
-            for article in searchedArticles {
-                tempSearchEntity.addToArticles(article.toEntity(in: context))
-            }
+            
+            tempSearchEntity.addToArticles(
+                NSSet(array: searchedArticles.map {
+                    $0.toEntity(in: context)
+                })
+            )
+            
             
             try context.save()
             

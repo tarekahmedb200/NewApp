@@ -36,7 +36,7 @@ extension HeadLinesRepositoryImplmentation : HeadLinesRepository {
             return headLinesFetcherService.fetchHeadLines()
                 .handleEvents(receiveOutput: { [weak self] articleResponseDTO in
                     let articles = articleResponseDTO.articles
-                    self?.cache.deleteAllArticles()
+                    self?.cache.deleteAllHeadlines()
                     self?.cache.save(articles: articles)
                 })
                 .eraseToAnyPublisher()

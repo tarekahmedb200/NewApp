@@ -22,7 +22,7 @@ class HeadlineStorageMock {
 
 extension HeadlineStorageMock : HeadLinesStorage {
     
-    func deleteAllArticles() {
+    func deleteAllHeadlines() {
         
         do {
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ArticleEntity")

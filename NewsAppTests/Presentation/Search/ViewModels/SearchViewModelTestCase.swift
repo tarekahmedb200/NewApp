@@ -32,7 +32,7 @@ final class SearchViewModelTestCase: XCTestCase {
         cancellables = []
         
         headLinesCache = HeadlineStorageMock()
-        headLinesCache.deleteAllArticles()
+        headLinesCache.deleteAllHeadlines()
         
         headLinesFetcherService = HeadLinesFetcherServiceMock()
     

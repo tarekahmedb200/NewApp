@@ -35,6 +35,7 @@ struct ArticleDetailsView: View {
                 }
             })
             .frame(width: UIScreen.main.bounds.width)
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if let shareURL = viewModel.url {

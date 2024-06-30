@@ -21,7 +21,7 @@ final class FetchHeadLinesUseCaseTest: XCTestCase {
         cancellables = []
         cache = HeadlineStorageMock()
         
-        cache.deleteAllArticles()
+        cache.deleteAllHeadlines()
         
         headLinesFetcherService = HeadLinesFetcherServiceMock()
     }

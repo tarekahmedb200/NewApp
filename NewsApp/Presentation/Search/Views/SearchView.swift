@@ -48,6 +48,8 @@ struct SearchView: View {
                 }
                 
             }
+            .navigationTitle("Search...")
+            .navigationBarTitleDisplayMode(.large)
             .onChange(of: viewModel.articles) {
                 
                 withAnimation(.bouncy) {

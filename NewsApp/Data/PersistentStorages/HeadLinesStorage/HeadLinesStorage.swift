@@ -10,5 +10,5 @@ import Foundation
 protocol HeadLinesStorage {
     func fetchArticles() throws -> [ArticleDTO]
     func save(articles: [ArticleDTO])
-    func deleteAllArticles()
+    func deleteAllHeadlines()
 }

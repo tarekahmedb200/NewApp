@@ -9,6 +9,6 @@ import Foundation
 
 enum APIConstants {
   static let host = "newsapi.org"
-  static let apiKey = "31532ecf04d549f2b51f761d65241fd7"
+  static let apiKey = "bbebe1a4121f4e96b50cc8ad8f6f1eb5"
 }
 
